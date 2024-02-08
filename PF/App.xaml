@@ -1,0 +1,22 @@
+﻿<Application x:Class="PF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PF"
+             StartupUri="src/v/LogoAnimado.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Name="Language">
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="/Resources/StringResourcesES.xaml"/>
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+                <ResourceDictionary x:Name="Theme">
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="/Resources/WhiteTheme.xaml"/>
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="titlePactometro">_PACTOMETER</system:String>
+    <system:String x:Key="menuSobre">_About the developer</system:String>
+    <system:String x:Key="menuVerAyuda">_General information</system:String>
+    <system:String x:Key="menuTema">_Theme</system:String>
+    <system:String x:Key="menuTemaClaro">_White</system:String>
+    <system:String x:Key="menuTemaOscuro">_Black</system:String>
+    <system:String x:Key="menuIdioma">_Language</system:String>
+    <system:String x:Key="menuEv">_Comparative</system:String>
+    <system:String x:Key="menuPact">_Pactometer</system:String>
+    <system:String x:Key="menuComp">_Election</system:String>
+    <system:String x:Key="menuSalir">_Exit</system:String>
+    <system:String x:Key="menuNuevo">_New data</system:String>
+    <system:String x:Key="menuImportar">_Import from file</system:String>
+    <system:String x:Key="menuDatos">_Add</system:String>
+    <system:String x:Key="menuArchivo">_File</system:String>
+    <system:String x:Key="menuAyuda">_Help</system:String>
+    <system:String x:Key="menuVer">_Window</system:String>
+    <system:String x:Key="menuGraficos">_Select</system:String>
+
+    <system:String x:Key="titleListaElecciones">ELECTIONS LIST</system:String>
+    <system:String x:Key="titleListaPartidos">RESULTS</system:String>
+    <system:String x:Key="listaHeaderEleccion">_ELECTION</system:String>
+    <system:String x:Key="listaHeaderFecha">_DATE</system:String>
+    <system:String x:Key="listaHeaderVotos">_SEATS</system:String>
+    <system:String x:Key="listaHeaderMayoria">_OVERALL MAJORITY</system:String>
+    <system:String x:Key="listaHeaderPartido">_PARTY</system:String>
+    <system:String x:Key="listaHeaderColor">_COLOR</system:String>
+
+    <system:String x:Key="wdatos_Title">ADD A NEW ELECTION</system:String>
+    <system:String x:Key="wdatos_Ambito">_Select the scope</system:String>
+    <system:String x:Key="wdatos_CA">_Select the autonomous community</system:String>
+    <system:String x:Key="wdatos_Fecha">_Election's date</system:String>
+    <system:String x:Key="wdatos_Partido">_Party name</system:String>
+    <system:String x:Key="wdatos_Votos">_Seats number</system:String>
+    <system:String x:Key="wdatos_Color">_Select a color</system:String>
+    <system:String x:Key="botonAdd">_Add</system:String>
+    <system:String x:Key="botonCancelar">_Cancel</system:String>
+    <system:String x:Key="botonGuardar">_Save</system:String>
+
+    <system:String x:Key="Absoluta">Overall</system:String>
+    <system:String x:Key="Simple">Simple</system:String>
+    <system:String x:Key="AFavor">SUPPORT</system:String>
+    <system:String x:Key="EnContra">AGAINST</system:String>
+    <system:String x:Key="Abstencion">ABSTENTION</system:String>
+
+    <system:String x:Key="SobreTitulo">About</system:String>
+    <system:String x:Key="SobreCuerpo">Developer:{0}Óscar Khergo{0}IGU-GII</system:String>
+    <system:String x:Key="AyudaTitulo">Help</system:String>
+    <system:String x:Key="AyudaCuerpo">Visit the users manual in documentation file</system:String>
+    <system:String x:Key="MessageEliminar">Delete</system:String>
+    <system:String x:Key="MessageEliminarCuerpo">Are you sure you want to delete?</system:String>
+    <system:String x:Key="MessageError">Error</system:String>
+    <system:String x:Key="MessageErrorCuerpo">Invalid fields</system:String>
+
+    <system:String x:Key="menuAbrirGraficos">Open graphics Window</system:String>
+    <system:String x:Key="menuAbrirDatos">Open data Window</system:String>
+    <system:String x:Key="windowGraficos">Graphics</system:String>
+    <system:String x:Key="windowListados">Data list</system:String>
+    <system:String x:Key="windowDatos">New data</system:String>
+
+    <system:String x:Key="TitleColor">CHOOSE A COLOR</system:String>
+    <system:String x:Key="SelectedColor">Selected color: </system:String>
+    <system:String x:Key="HexCode">Hex code: </system:String>
+</ResourceDictionary>

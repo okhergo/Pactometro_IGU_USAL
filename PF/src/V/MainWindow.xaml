@@ -1,0 +1,62 @@
+﻿<Window x:Class="PF.V.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="{DynamicResource windowGraficos}" Background="{DynamicResource Background}" MinHeight="200" MinWidth="300" Height="500" Width="800" SizeChanged="Window_SizeChanged">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Background="{DynamicResource Menu}">
+            <MenuItem Header="{DynamicResource menuArchivo}">
+                <MenuItem Header="{DynamicResource menuDatos}">
+                    <MenuItem Header="{DynamicResource menuNuevo}" Click="MenuNuevosDatos_Click"/>
+                    <MenuItem Header="{DynamicResource menuImportar}" Click="MenuImportarDatos_Click"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="{DynamicResource menuAbrirDatos}" Click="MenuAbrirDatos_Click"/>
+                <MenuItem Header="{DynamicResource menuSalir}" Click="MenuSalir_Click"/>
+            </MenuItem>
+            <MenuItem Header="{DynamicResource menuGraficos}">
+                <MenuItem Header="{DynamicResource menuComp}" Click="MenuComparativa_Click"/>
+                <MenuItem Header="{DynamicResource menuPact}" Click="MenuPactometro_Click"/>
+                <MenuItem Header="{DynamicResource menuEv}" Click="MenuEvolucion_Click"/>
+            </MenuItem>
+            <MenuItem Header="{DynamicResource menuVer}">
+                <MenuItem Header="{DynamicResource menuTema}">
+                    <MenuItem Header="{DynamicResource menuTemaClaro}" Click="MenuTemaClaro_Click"/>
+                    <MenuItem Header="{DynamicResource menuTemaOscuro}" Click="MenuTemaOscuro_Click"/>
+                </MenuItem>
+                <MenuItem Header="{DynamicResource menuIdioma}">
+                    <MenuItem Header="ES" Click="MenuIdiomaES_Click"/>
+                    <MenuItem Header="EN" Click="MenuIdiomaEN_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="{DynamicResource menuAyuda}">
+                <MenuItem Header="{DynamicResource menuVerAyuda}" Click="MenuAyuda_Click"/>
+                <Separator/>
+                <MenuItem Header="{DynamicResource menuSobre}" Click="MenuSobre_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="1" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center" Name="titleLabel" 
+                   Foreground="{DynamicResource Title}" Content="{Binding title}" FontWeight="Bold"/>
+            <ScrollViewer Name="scroll" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="1" >
+                <Canvas Name="canvas" Background="{DynamicResource Canvas}">
+                    <Canvas.LayoutTransform>
+                        <ScaleTransform ScaleY="-1"/>
+                    </Canvas.LayoutTransform>
+                </Canvas>
+            </ScrollViewer>
+        </Grid>
+    </DockPanel>
+</Window>

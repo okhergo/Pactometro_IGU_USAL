@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Background Colors -->
+    <SolidColorBrush x:Key="Background" Color="#F2F2F2"/>
+    <SolidColorBrush x:Key="Canvas" Color="#FFFFFF"/>
+
+    <!-- Primary Colors -->
+    <SolidColorBrush x:Key="Title" Color="#496FFF"/>
+    <SolidColorBrush x:Key="Menu" Color="#FFFFFF"/>
+
+    <!-- Text Colors -->
+    <SolidColorBrush x:Key="Text" Color="#121215"/>
+    
+    <!-- Logo Colors -->
+    <SolidColorBrush x:Key="LogoMorado" Color="#9a69dd"/>
+    <SolidColorBrush x:Key="LogoRojo" Color="#c40b15"/>
+    <SolidColorBrush x:Key="LogoNaranja" Color="#f1b80a"/>
+    <SolidColorBrush x:Key="LogoAzul" Color="#0d54d7"/>
+    <SolidColorBrush x:Key="LogoVerde" Color="#71cd39"/>
+
+</ResourceDictionary>

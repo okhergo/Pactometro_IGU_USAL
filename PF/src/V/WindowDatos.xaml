@@ -1,0 +1,87 @@
+﻿<Window x:Class="PF.V.WindowDatos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:PF.V"
+        xmlns:model="clr-namespace:PF.M"
+        mc:Ignorable="d"
+        Title="{DynamicResource windowDatos}" Height="450" Width="800" MinHeight="200" MinWidth="300" Background="{DynamicResource Background}">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="tipoEleccion" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="model:tipoEleccion"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <ObjectDataProvider x:Key="comunidadAutonoma" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="model:comunidadAutonoma"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="{DynamicResource wdatos_Title}" Margin="20, 0" Grid.Row="0" Foreground="{DynamicResource Title}" FontWeight="Bold"/>
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="{DynamicResource wdatos_Ambito}" Margin="40,10" Grid.Row="1" Foreground="{DynamicResource Text}"/>
+            <ComboBox Name="boxTipo" Margin="40, 40, 40, 20" ItemsSource="{Binding Source={StaticResource tipoEleccion}}"/>
+            <Label Content="{DynamicResource wdatos_CA}" Grid.Column="1" Margin="40,10" Grid.Row="1" Foreground="{DynamicResource Text}"/>
+            <ComboBox Name="boxCA" Margin="40, 40, 40, 20" Grid.Column="1" ItemsSource="{Binding Source={StaticResource comunidadAutonoma}}"/>
+            <Label Content="{DynamicResource wdatos_Fecha}" Grid.Column="2" Margin="40,10" Foreground="{DynamicResource Text}"/>
+            <DatePicker Name="pickerFecha" Grid.Column="3" Margin="40, 40, 40, 20"/>
+        </Grid>
+        <Grid Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="{DynamicResource wdatos_Partido}" Margin="40,0" Foreground="{DynamicResource Text}"/>
+            <TextBox Name="boxNombre" Margin="40,30,40,10"/>
+            <Label Content="{DynamicResource wdatos_Votos}" Grid.Column="1" Foreground="{DynamicResource Text}"/>
+            <TextBox Name="boxEscaños" Margin="0,30,0,10" Grid.Column="1"/>
+            <Label Content="{DynamicResource wdatos_Color}" Margin="40,0,0,0" Grid.Column="2" Foreground="{DynamicResource Text}"/>
+            <Button Margin="40,30,0,10" Grid.Column="2" Click="colorButton_Click" IsDefault="True" Background="{DynamicResource Title}" Foreground="{DynamicResource Menu}">
+                <Rectangle Name="colorPicked" Height="20" Width="20" Margin="5" Fill="Black" Stroke="{DynamicResource Menu}"/>
+            </Button>
+            <Button Content="{DynamicResource botonAdd}" Margin="40,30,40,10" Grid.Column="3" Click="add_Click" IsDefault="True" Background="{DynamicResource Title}" Foreground="{DynamicResource Menu}"/>
+        </Grid>
+        <ListView Name="listaPartidosAdded" Margin="40,20"  Grid.Row="3" Background="{DynamicResource Background}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="200" Header="{DynamicResource listaHeaderPartido}" DisplayMemberBinding="{Binding nombre}"/>
+                    <GridViewColumn Width="100" Header="{DynamicResource listaHeaderVotos}" DisplayMemberBinding="{Binding escaños}"/>
+                    <GridViewColumn Width="100" Header="{DynamicResource listaHeaderColor}">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Rectangle Height="20" Width="20" Fill="{Binding color}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn> 
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid Grid.Row="4" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Content="{DynamicResource botonCancelar}" Margin="80,0,0,20" Grid.Column="1" Click="cancel_Click" Background="{DynamicResource Title}" Foreground="{DynamicResource Menu}"/>
+            <Button Name="saveButton" Content="{DynamicResource botonGuardar}" Margin="40,0,40,20" Grid.Column="2" Click="save_Click" Background="{DynamicResource Title}" Foreground="{DynamicResource Menu}"/>
+        </Grid>
+    </Grid>
+</Window>
